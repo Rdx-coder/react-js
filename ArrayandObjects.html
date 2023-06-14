@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array and Objects in jsx</title>
+         <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        
+    </head>
+    <body>
+      <div id="root"></div>
+      <script type="text/babel">
+        function sum() {
+           
+        }
+    const header = <h2>Jsx expression</h2>;
+    function Mpp(){
+    let arr = [1,2,3,4,5,6];
+    let obj ={
+        name : "alexa",
+        age : 20
+    }
+    let cars = ["Tata","Ferrari","Audi","mercedes","Thar"];
+
+    return(
+        <>
+         <h1>array and object in java </h1>
+         <h3>{obj.name}</h3>
+         {arr.map((num,index)=><h2 key={index}>{num}</h2>)}
+            
+            <h1>List of cars</h1>
+            <ul>
+              {cars.map((car,index)=> (
+                <li key={index}>{car}</li>
+                ))}
+             </ul>
+                
+         </>
+        )
+   }
+       ReactDOM.createRoot(document.getElementById("root")).render(<Mpp/>);
+
+      </script>
+    </body>
+</html>

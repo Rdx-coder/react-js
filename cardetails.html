@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array and Objects in jsx</title>
+        <script crossorigin
+            src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin
+            src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <style>
+            /* body{
+                background-color: beige;
+                align-items: center;
+                align-content: center;
+                font-family: fantasy;
+                display: table-caption;
+            } */
+            img{
+                height: 30px;
+                width: 40px;
+            }
+            h1{
+                color: black;
+                background-color: bisque;
+            }
+             tr{
+                border-bottom: 2px;
+                border-top: 3px;
+                border-radius: 5px solid red;
+            }
+            th{
+                border-radius: 4px red;
+            }
+
+
+
+
+        </style>
+
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+        function sum() {
+           
+        }
+    const header = <h2></h2>;
+    function Cars(){
+
+    let cars =[{
+        name : "BMW",
+        avg : 15 ,
+        speed : 300,
+        engine : 2500,
+        img : "https://w7.pngwing.com/pngs/38/708/png-transparent-car-mercedes-car-love-compact-car-vehicle-thumbnail.png"
+
+    },
+    {
+        name : "THAR",
+        avg : 20 ,
+        speed : 320,
+        engine : 2000,
+        img : "https://w7.pngwing.com/pngs/38/708/png-transparent-car-mercedes-car-love-compact-car-vehicle-thumbnail.png"
+
+    },
+
+    {
+        name : "MERCEDES",
+        avg : 10 ,
+        speed : 500,
+        engine : 3000,
+        img : "https://w7.pngwing.com/pngs/38/708/png-transparent-car-mercedes-car-love-compact-car-vehicle-thumbnail.png"
+
+    },
+
+{
+    name : "SKODA",
+    avg : 25 ,
+    speed : 400,
+    engine : 2200,
+    img : "https://w7.pngwing.com/pngs/38/708/png-transparent-car-mercedes-car-love-compact-car-vehicle-thumbnail.png"
+
+}
+
+]
+    return (
+        <>
+        <h1>Cars Details</h1>
+                <table border="1px">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>speed</th>
+                        <th>Avg</th>
+                        <th>Engine</th>
+                        <th>Image</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {cars.map((car,index)=>(
+                            <tr key = {index}>
+                            <td>{car.name}</td>
+                            <td>{car.avg}</td>
+                            <td>{car.speed}</td>    
+                            <td>{car.engine}</td>    
+                            <td> <img src= {car.img}/></td>    
+                            </tr>
+    ))}</tbody>
+            </table>
+        </>
+        )
+   }
+  
+    function Student(){
+
+    let students =[{
+        name : "alexa",
+        age : 20 ,
+        marks : 50
+    },
+    {
+        name : "google",
+        age : 19 ,
+        marks : 70
+    },
+
+    {
+        name : "shri",
+        age : 21 ,
+        marks : 80
+    }
+
+]
+    return (
+        <>
+        <h1>Student Details</h1>
+                <table border="1px" >
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Marks</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {students.map((student,index)=>(
+                            <tr key = {index}>
+                            <td>{student.name}</td>
+                            <td>{student.age}</td>
+                            <td>{student.marks}</td>    
+                            </tr>
+    ))}</tbody>
+                    </table>
+        </>
+        )
+   }
+   function App(){
+    let loggedIn = true;
+    let firstName = "rahul";
+    let lastName = "dangi";
+   return (
+    <>  
+    <h1>hello {loggedIn? lastName || firstName :"User"}!</h1>
+    {loggedIn&&<p>Welcome to the Portal</p>}
+    </>     
+   )
+}
+   
+    //    ReactDOM.createRoot(document.getElementById("root")).render( <App> <Cars/><Student/></>);
+    ReactDOM.createRoot(document.getElementById("root")).render( <App/>);
+
+      </script>
+    </body>
+</html>
