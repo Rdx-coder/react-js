@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array and Objects in jsx</title>
+        <script crossorigin
+            src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin
+            src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+        function sum() {
+           
+        }
+    const header = <h2></h2>;
+    function Stp(){
+
+    let students =[{
+        name : "alexa",
+        age : 20 ,
+        marks : 50
+    },
+    {
+        name : "google",
+        age : 19 ,
+        marks : 70
+    },
+
+    {
+        name : "shri",
+        age : 21 ,
+        marks : 80
+    }
+
+]
+    return (
+        <>
+        <h1>Student Details</h1>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Marks</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {students.map((student,index)=>(
+                            <tr key = {index}>
+                            <td>{student.name}</td>
+                            <td>{student.age}</td>
+                            <td>{student.marks}</td>    
+                            </tr>
+    ))}</tbody>
+                    </table>
+        </>
+        )
+   }
+       ReactDOM.createRoot(document.getElementById("root")).render(<Stp/>);
+
+      </script>
+    </body>
+</html>
